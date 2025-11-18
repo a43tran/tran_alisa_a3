@@ -61,19 +61,28 @@
       }
       
       .intro {
-        margin-top: 300px;
-        max-width: 500px;
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
       }
       
       .intro img {
-        max-width: 1440px;
         text-align: center;
+        left: 120px;
+        right: 120px;
+        width: 100%;
+      }
+      
+      .intro-text {
+        position: absolute;
+        top: 250px;
+        left: 120px;
+        max-width: 520px;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      
       <nav>
         <img src="logo.png" alt="Alisa Tran's logo">
         <h2>
@@ -86,9 +95,10 @@
           ABOUT ME
         </h2>
       </nav>
-      
+
       <div class="intro">
          <img src="intro-header.png" alt="Seal in a mini lake, surrounded by rocks and grass">
+      <div class="intro-text">
         <h1>
           Splashing in to say hi,
 I’m Alisa!
@@ -97,6 +107,7 @@ I’m Alisa!
         <p>
           Welcome to my creative shore, filled with waves of various works and projects throughout my design journey, even seal-ly ones.
         </p>
+    </div>
       </div>
     </div>
   </body>
