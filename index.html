@@ -30,7 +30,7 @@
 
       nav {
         text-align: center;
-        max-width: 1200px; 
+        max-width: 1200px;
         padding: 50px 120px 0px 120px;
         margin: 0 auto;
       }
@@ -49,14 +49,14 @@
       nav ul {
         list-style: none;
       }
-      
-        nav li {
+
+      nav li {
         display: inline-block;
         margin-right: 60px;
         margin-left: 60px;
         vertical-align: middle;
       }
-      
+
       nav a img {
         width: 100px;
         height: auto;
@@ -84,21 +84,34 @@
         top: 100px;
         left: 120px;
         max-width: 520px;
+
+      }
+
+      .about-preview {
+        position: relative;
+        margin: 0 auto;
+      }
+      
+      .about-preview img {
+        position: absolute;
+        right: 170px;
+      }
+      
+      .about-preview h1 {
+        margin-left: 120px;
       }
     </style>
   </head>
   <body>
-          <nav>
-        <ul>
-          <li><a href="index.html"><img src="photos/logo.png" alt="Alisa Tran's logo"></a></li>
-          <li><a href="my-projects.html">MY PROJECTS</a></li>
-          <li><a href="creative-works.html">CREATIVE WORKS</a></li>
-          <li><a href="about-me.html">ABOUT ME</a></li>
-        </ul>
-      </nav>
-    
+    <nav>
+      <ul>
+        <li><a href="index.html"><img src="photos/logo.png" alt="Alisa Tran's logo"></a></li>
+        <li><a href="my-projects.html">MY PROJECTS</a></li>
+        <li><a href="creative-works.html">CREATIVE WORKS</a></li>
+        <li><a href="about-me.html">ABOUT ME</a></li>
+      </ul>
+    </nav>
     <div class="container">
-
       <div class="intro">
         <img src="photos/intro-header.png" alt="Seal in a mini lake, surrounded by rocks and grass">
         <div class="intro-text">
@@ -106,11 +119,16 @@
             Splashing in to say hi,
             I’m Alisa!
           </h1>
-
           <p>
             Welcome to my creative shore, filled with waves of various works and projects throughout my design journey, even seal-ly ones.
           </p>
         </div>
+      </div>
+      <div class="about-preview">
+        <img src="photos/intro-me.png" alt="Alisa Tran's face">
+        <h1>
+          A little about me!
+        </h1>
       </div>
     </div>
   </body>
