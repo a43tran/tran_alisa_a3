@@ -18,35 +18,46 @@
       body {
         background-image: linear-gradient(to bottom, #FFFFFF, #F6FBFF, #94C1E6);
       }
-      
+
       h1 {
         color: #003F73;
         font-size: 48px;
       }
 
-      h2 {
-        color: #003F73;
-        font-size: 20px;
-        font-weight: 600;
-      }
-      
       p {
         color: #003F73;
       }
 
       nav {
-        display: grid;
-        grid-template-columns: 300px 300px 300px 300px;
-        column-gap: 20px;
-        padding-left: 120px;
-        padding-right: 120px;
         text-align: center;
+        font-optical-sizing: auto;
+        font-style: normal;
+        text-align: center;
+        max-width: 1200px; 
+        width: 100%;
+        padding: 120px 120px 0px 120px;
       }
-      
-      nav h2:hover {
+
+      nav a {
+        color: #003F73;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      nav a:hover {
         color: #62A7DE;
       }
 
+      ul {
+        list-style: none;
+      }
+      
+        li {
+        display: inline-block;
+          margin: 60px;
+      }
+      
       nav img {
         width: 100px;
         height: auto;
@@ -60,7 +71,7 @@
         width: 1440px;
         margin: 0 auto;
       }
-      
+
       .intro {
         display: grid;
         grid-template-columns: 1200px;
@@ -69,11 +80,11 @@
         margin: 0 auto;
         margin-right: 10px;
       }
-      
+
       .intro img {
         width: 1200px;
-    }
-      
+      }
+
       .intro-text {
         position: absolute;
         top: 250px;
@@ -82,31 +93,31 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <nav>
-        <img src="logo.png" alt="Alisa Tran's logo">
+          <nav>
         <ul>
-       <li>MY PROJECTS</li>
-        <li>CREATIVE WORKS</li>
-        <li>ABOUT ME</li>
+          <li><a href="index.html"><img src="logo.png" alt="Alisa Tran's logo"></a></li>
+          <li><a href="my-projects.html">MY PROJECTS</a></li>
+          <li><a href="creative-works.html">CREATIVE WORKS</a></li>
+          <li><a href="about-me.html">ABOUT ME</a></li>
         </ul>
       </nav>
+    
+    <div class="container">
 
       <div class="intro">
-         <img src="intro-header.png" alt="Seal in a mini lake, surrounded by rocks and grass">
-      <div class="intro-text">
-        <h1>
-          Splashing in to say hi,
-I’m Alisa!
-        </h1>
-        
-        <p>
-          Welcome to my creative shore, filled with waves of various works and projects throughout my design journey, even seal-ly ones.
-        </p>
-    </div>
+        <img src="intro-header.png" alt="Seal in a mini lake, surrounded by rocks and grass">
+        <div class="intro-text">
+          <h1>
+            Splashing in to say hi,
+            I’m Alisa!
+          </h1>
+
+          <p>
+            Welcome to my creative shore, filled with waves of various works and projects throughout my design journey, even seal-ly ones.
+          </p>
+        </div>
       </div>
     </div>
   </body>
 
 </html>
-
