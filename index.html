@@ -170,8 +170,7 @@
         position: absolute;
         width: 1200px;
         top: 2350px;
-        left: 120px;
-        right: 120px;
+        margin-left: 120px;
       }
 
       .recent-carousel h1 {
@@ -180,7 +179,8 @@
       }
       
       .carousel-box {
-        width: 100%;
+        width: 980px;
+        position: relative;
       }
       
       .carousel-box img {
@@ -192,7 +192,34 @@
         border-radius: 10px;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
       }
-
+      
+      .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        background-color: #CADBE9;
+        color: #003F73;
+        font-size: 30px;
+              box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+        transition: transform 0.2s ease, background-color 0.2s ease;
+      }
+      
+      .arrow:hover {
+        transform: translateY(-50%) scale(1.1);
+        background-color: #8AC7F9;
+      }
+      
+      #prev {
+        left: -20px;
+      }
+      
+      #next {
+        right: 0px;
+      }
 
       #recent-projects,
       #recent-works {
@@ -371,6 +398,8 @@
         </div>
       </div>
       <div class="background-water"> <img src="photos/background-water.svg" alt="Seals in water"> </div>
+      
+      
       <div class="recent-carousel">
         <h1> Dive into my work! </h1> <button id="recent-projects"> Recent Projects </button> <button id="recent-works"> Recent Works </button>
         <div class="carousel-box">
