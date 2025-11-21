@@ -71,7 +71,7 @@
       
       .background-water {
         position: absolute;
-        top: 1900px;
+        top: 1990px;
 }
       .background-water img{
         width: 100%;
@@ -100,10 +100,26 @@
         margin: 0 auto;
       }
       
-      .about-preview img {
+      .bottom-photo {
         position: absolute;
+        top: 110px;
         right: 20px;
+        transform: rotate(3deg);
+              border: 20px solid white;
+        border-radius: 10px;
+              box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
       }
+      
+      .top-photo {
+        position: absolute;
+        top: 390px;
+        right: 50px;
+        transform: rotate(-7.28deg);
+        border: 20px solid white;
+        border-radius: 10px;
+                    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+      }
+
       
       .about-preview h1, .about-preview p {
         max-width: 520px;
@@ -118,7 +134,6 @@
         width: 300px;
         border-radius: 10px;
         padding: 15px;
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
         transform: rotate(-4.13deg);
       }
       
@@ -151,8 +166,13 @@
         </div>
       </div>
       <div class="about-preview">
-        <img src="photos/intro-me.png" alt="Alisa Tran's face">
-        <h1>
+                   <div class="top-photo">
+        <img src="photos/intro-me-2.png" alt="Alisa Tran with a shark">
+        </div>
+         <div class="bottom-photo">
+        <img src="photos/intro-me-1.png" alt="Alisa Tran's face">
+        </div>
+               <h1>
           A little about me!
         </h1>
         <p>
