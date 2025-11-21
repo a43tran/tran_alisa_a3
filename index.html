@@ -171,6 +171,7 @@
         width: 1200px;
         top: 2350px;
         left: 120px;
+        right: 120px;
       }
 
       .recent-carousel h1 {
@@ -178,11 +179,15 @@
         margin-top: 220px;
       }
       
+      .carousel-box {
+        width: 100%;
+      }
+      
       .carousel-box img {
         display: block;
         margin-top: 50px;
-        width: 837px;
-        height: 471px;
+        width: 880px;
+        height: 470px;
         border: 40px solid white;
         border-radius: 10px;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
@@ -425,15 +430,65 @@
     <script>
       let projectsBtn = document.getElementById("recent-projects");
       let worksBtn = document.getElementById("recent-works");
+      let carouselBox = document.querySelector(".carousel-box");
+      
+      let projectImages = [
+        "photos/sentesaur.png",
+        "photos/doorway.png"
+      ];
+      
+      let workImages = [
+        "photos/magazine-preview.png",
+      ]
+      
+      let currentSet = projectImages;
+      let index = 0;
+      
+      function updateImage() {
+        carouselBox.innerHTML = `
+          <img src="${currentSet[index]}" alt="Carousel Image">
+            
+        <button id="prev" class="arrow">‹</button>
+        <button id="next" class="arrow">›</button>
+      `;
+        
+        document.getElementById("prev").onclick = function () {
+          index = index - 1;
+          if (index < 0) {
+            index = currentSet.length - 1;
+          }
+          updateImage();
+        };
+        
+        document.getElementById("next").onclick = function () {
+          index = index + 1;
+          if (index >= currentSet.length) {
+            index = 0;
+          }
+          updateImage();
+        };
+      }
+      
+      
       let defaultColor = "#8AC7F9";
       projectsBtn.onclick = function () {
+        currentSet = projectImages;
+        index = 0;
+        updateImage();
+        
         projectsBtn.style.backgroundColor = "#1D76C0";
         worksBtn.style.backgroundColor = defaultColor;
       };
       worksBtn.onclick = function () {
+        currentSet = workImages;
+        index = 0;
+        updateImage();
+        
         worksBtn.style.backgroundColor = "#1D76C0";
         projectsBtn.style.backgroundColor = defaultColor;
       };
+      
+      updateImage();
     </script>
 
   </body>
