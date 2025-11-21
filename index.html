@@ -250,8 +250,34 @@
         height: 50px;
         border-radius: 10px;
         border: none;
-        padding: 20px;
+        padding: 0 20px;
+        background-color: #EFF8FF;
+        color: #003F73;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400px;
       }
+      
+      input[type="submit"] {
+        width: 160px;
+        height: 50px;
+        background-color: #093D68;
+        color: white;
+        text-align: center;
+      }
+      
+      textarea {
+        width: 406px;
+        height: 171px;
+            border-radius: 10px;
+        border: none;
+        padding: 0 20px;
+        background-color: #EFF8FF;
+        color: #003F73;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400px;
+        padding-top: 20px;
+      }
+      
     </style>
 
   </head>
@@ -307,8 +333,9 @@
         </div>
         <div class="get-in-touch-form">
           <form action="/action_page.php">
-            <input type="text" id="fname" name="fname" placeholder="First Name"><br><br>
-            <input type="text" id="lname" name="lname" placeholder="Last Name"><br><br>
+            <input type="text" id="fname" name="fname" placeholder="Full Name"><br><br>
+            <input type="text" id="email" name="email" placeholder="Email*"><br><br>
+            <textarea id="msg" name="msg" placeholder="Message" rows="8"></textarea><br><br>
             <input type="submit" value="Send Message">
           </form>
         </div>
