@@ -36,6 +36,8 @@
         max-width: 1200px;
         padding: 30px 0px;
         margin: 0 auto;
+        position: relative;
+        z-index: 9999;
       }
 
       nav a {
@@ -43,6 +45,7 @@
         font-size: 20px;
         font-weight: 600;
         text-decoration: none;
+      transition: color 0.3s ease;
       }
 
       nav a:hover {
@@ -51,6 +54,8 @@
 
       nav ul {
         list-style: none;
+        padding: 0;
+        margin: 0;
       }
 
       nav li {
@@ -90,6 +95,8 @@
         width: 100%;
         height: auto;
         margin-top: -200px;
+        z-index: -1;
+        position: relative;
       }
 
       .intro-text {
@@ -201,6 +208,21 @@
         width: 520px;
       }
       
+      .get-in-touch img {
+        width: 35;
+        height: auto;
+      }
+      
+      .get-in-touch ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .get-in-touch li {
+        display: inline-block;
+        margin-right: 20px;
+      }
     </style>
     
   </head>
@@ -243,6 +265,13 @@
               <p>
                 Let’s talk! Feel free to shoot a message if you have commission or project inquiries, or want to collaborate! I’m always open to connecting with people and creative opportunities. I’d love to hear from you and design something meaningful together in future. 
               </p>
+                    <ul>
+                      <li> <img src="photos/email.svg" alt="Envelope"> </li>
+                   <li><img src="photos/ig.svg" alt="Instagram Logo"></li> 
+                     <li><img src="photos/linkedin.svg" alt="LinkedIn Logo"></li>
+                     <li><img src="photos/tiktok.svg" alt="TikTok Logo"></li>
+                    </ul>
+                   
       </div>
     </div>
     <script>
