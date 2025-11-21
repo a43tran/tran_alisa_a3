@@ -176,11 +176,6 @@
         margin-top: 220px;
       }
 
-
-      .why-seals h1:hover {
-        transform: translateY(-10px);
-      }
-
       #recent-projects,
       #recent-works {
         border: none;
@@ -206,19 +201,24 @@
         display: grid;
         grid-template-columns: 50% 50%;
         gap: 120px;
-        margin-top: 1550px;
+        margin-top: 1600px;
         padding: 0 120px;
       }
 
       .get-in-touch-item {
         position: relative;
       }
-      
-        .get-in-touch-item h1 {
+
+      .get-in-touch-item h1 {
         margin-bottom: 20px;
       }
+
       
-      
+      .why-seals h1:hover {
+        transform: translateY(-10px);
+      }
+
+
       .get-in-touch-item p {
         width: 520px;
       }
@@ -239,14 +239,18 @@
         margin-top: 30px;
         margin-right: 25px;
       }
-      
+
       .get-in-touch-form {
         margin-top: 125px;
         z-index: 9999;
       }
-      
+
       input {
-width: 406px;
+        width: 406px;
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+        padding: 20px;
       }
     </style>
 
@@ -296,17 +300,17 @@ width: 406px;
           <ul>
             <li> <a href="mailto:alisa.mai.tran@gmail.com"><img src="photos/email.svg" alt="Envelope"></a></li>
             <li><a href="https://www.instagram.com/alisatraan/"><img src="photos/ig.svg" alt="Instagram Logo"></a></li>
-            <li><a href="www.linkedin.com/in/alisa-tran-mai"><img src="photos/linkedin.svg" alt="LinkedIn Logo"></li>
+            <li><a href="www.linkedin.com/in/alisa-tran-mai"><img src="photos/linkedin.svg" alt="LinkedIn Logo"></a></li>
             <li><a href="https://www.tiktok.com/@alisatrn"><img src="photos/tiktok.svg" alt="TikTok Logo"></a></li>
           </ul>
 
         </div>
-                <div class="get-in-touch-form">
-                  <form action="/action_page.php">
-                    <input type="text" id="fname" = name="fname" placeholder="First Name"><br><br>
-                    <input type="text" id="lname" = name="lname" placeholder="Last Name"><br><br>
-                    <input type="submit" value="Send Message">
-                  </form>
+        <div class="get-in-touch-form">
+          <form action="/action_page.php">
+            <input type="text" id="fname" name="fname" placeholder="First Name"><br><br>
+            <input type="text" id="lname" name="lname" placeholder="Last Name"><br><br>
+            <input type="submit" value="Send Message">
+          </form>
         </div>
       </div>
     </div>
