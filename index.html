@@ -26,7 +26,7 @@
       p {
         color: #003F73;
       }
-      
+
       img {
         display: block;
       }
@@ -45,7 +45,7 @@
         font-size: 20px;
         font-weight: 600;
         text-decoration: none;
-      transition: color 0.3s ease;
+        transition: color 0.3s ease;
       }
 
       nav a:hover {
@@ -130,12 +130,14 @@
         border-radius: 10px;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
       }
-      
-      .top-photo, .bottom-photo {
+
+      .top-photo,
+      .bottom-photo {
         transition: transform 0.3s ease;
       }
-      
-      .top-photo:hover, .bottom-photo:hover {
+
+      .top-photo:hover,
+      .bottom-photo:hover {
         transform: translateY(-10px);
       }
 
@@ -162,10 +164,6 @@
         margin-bottom: 50px;
       }
 
-      
-      .why-seals h1:hover {
-        transform: translateY(-10px);
-      }
 
       .recent-carousel {
         position: absolute;
@@ -178,6 +176,11 @@
         margin-top: 220px;
       }
 
+
+      .why-seals h1:hover {
+        transform: translateY(-10px);
+      }
+
       #recent-projects,
       #recent-works {
         border: none;
@@ -187,6 +190,7 @@
         display: inline-block;
         font-size: 16px;
         font-family: "Poppins", sans-serif;
+        font-weight: 400;
         border-radius: 50px;
         margin-right: 20px;
         background-color: #8AC7F9;
@@ -197,35 +201,55 @@
       #recent-works:hover {
         box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.1);
       }
-      
-      .get-in-touch {
-        position: absolute;
-        top: 3520px;
-        left: 120px;
+
+      .get-in-touch-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 120px;
+        margin-top: 1550px;
+        padding: 0 120px;
+      }
+
+      .get-in-touch-item {
+        position: relative;
       }
       
-      .get-in-touch p {
+        .get-in-touch-item h1 {
+        margin-bottom: 20px;
+      }
+      
+      
+      .get-in-touch-item p {
         width: 520px;
       }
-      
-      .get-in-touch img {
+
+      .get-in-touch-item img {
         width: 35;
         height: auto;
       }
-      
-      .get-in-touch ul {
+
+      .get-in-touch-item ul {
         list-style: none;
         padding: 0;
-        margin: 0;
+        margin-top: 30px;
       }
 
-      .get-in-touch li {
+      .get-in-touch-item li {
         display: inline-block;
         margin-top: 30px;
         margin-right: 25px;
       }
+      
+      .get-in-touch-form {
+        margin-top: 125px;
+        z-index: 9999;
+      }
+      
+      input {
+width: 406px;
+      }
     </style>
-    
+
   </head>
   <body>
     <nav>
@@ -258,21 +282,32 @@
       <div class="recent-carousel">
         <h1> Dive into my work! </h1> <button id="recent-projects"> Recent Projects </button> <button id="recent-works"> Recent Works </button>
       </div>
-                  <div class="get-in-touch">
-        <h1>
-          Get in Touch!
-        </h1>
-              
-              <p>
-                Let’s talk! Feel free to shoot a message if you have commission or project inquiries, or want to collaborate! I’m always open to connecting with people and creative opportunities. I’d love to hear from you and design something meaningful together in future. 
-              </p>
-                    <ul>
-                      <li> <a href="mailto:alisa.mai.tran@gmail.com"><img src="photos/email.svg" alt="Envelope"></a></li>
-                      <li><a href="https://www.instagram.com/alisatraan/"><img src="photos/ig.svg" alt="Instagram Logo"></a></li> 
-                     <li><a href="www.linkedin.com/in/alisa-tran-mai"><img src="photos/linkedin.svg" alt="LinkedIn Logo"></li>
-                     <li><a href="https://www.tiktok.com/@alisatrn"><img src="photos/tiktok.svg" alt="TikTok Logo"></a></li>
-                    </ul>
-                   
+
+
+      <div class="get-in-touch-container">
+        <div class="get-in-touch-item">
+          <h1>
+            Get in Touch!
+          </h1>
+
+          <p>
+            Let’s talk! Feel free to shoot a message if you have commission or project inquiries, or want to collaborate! I’m always open to connecting with people and creative opportunities. I’d love to hear from you and design something meaningful together in future.
+          </p>
+          <ul>
+            <li> <a href="mailto:alisa.mai.tran@gmail.com"><img src="photos/email.svg" alt="Envelope"></a></li>
+            <li><a href="https://www.instagram.com/alisatraan/"><img src="photos/ig.svg" alt="Instagram Logo"></a></li>
+            <li><a href="www.linkedin.com/in/alisa-tran-mai"><img src="photos/linkedin.svg" alt="LinkedIn Logo"></li>
+            <li><a href="https://www.tiktok.com/@alisatrn"><img src="photos/tiktok.svg" alt="TikTok Logo"></a></li>
+          </ul>
+
+        </div>
+                <div class="get-in-touch-form">
+                  <form action="/action_page.php">
+                    <input type="text" id="fname" = name="fname" placeholder="First Name"><br><br>
+                    <input type="text" id="lname" = name="lname" placeholder="Last Name"><br><br>
+                    <input type="submit" value="Send Message">
+                  </form>
+        </div>
       </div>
     </div>
     <script>
@@ -288,6 +323,6 @@
         projectsBtn.style.backgroundColor = defaultColor;
       };
     </script>
-    
+
   </body>
 </html>
