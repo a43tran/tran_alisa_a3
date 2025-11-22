@@ -86,7 +86,7 @@
     }
 
     .container {
-      width: 1200px;
+      max-width: 1200px;
       margin: 0 auto;
       position: relative;
     }
@@ -150,7 +150,9 @@
     .gallery {
       display: grid;
       grid-template-columns: 50% 50%;
-      gap: 50px;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
     
     .gallery-item {
@@ -159,7 +161,8 @@
     }
     
     .gallery-item img {
-      max-width: 500px; 
+      width: 500px; 
+      height: 700px;
       z-index: 9999; 
       border-radius: 10px; 
       box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.1);
@@ -188,6 +191,9 @@
            <div class="gallery">
         <div class="gallery-item">
           <img src="trad-art/euphony-cacophony.png" alt="Painting that depicts different forms of silence">
+        </div>
+              <div class="gallery-item">
+          <img src="trad-art/it-pass.jpg" alt="Painting that depicts neglect of womens' health">
         </div>
       </div>
       <div class="background-water">
