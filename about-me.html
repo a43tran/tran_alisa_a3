@@ -100,7 +100,7 @@
     .background-water {
       position: absolute;
       z-index: -1;
-      top: 1200px;
+      top: 1150px;
     }
     
     .header h1 {
@@ -204,6 +204,50 @@
           padding-top: 150px;
     }
     
+    .value-item-header1, .value-item-header2, .value-item-header3 {
+      background-color: #3476AD;
+      height: 80;
+      border-radius: 10px;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .value-item-header1 {
+      rotate: 3deg;
+    }
+    
+        .value-item-header1 h2{
+          color: white;
+          margin-top: 20px;
+          text-align: center;
+    }
+    
+     .value-item-header2 {
+      rotate: -3deg;
+    }
+      
+    
+        .value-item-header2 h2{
+          color: white;
+          margin-top: 20px;
+          text-align: center;
+    }
+    
+     .value-item-header3 {
+      rotate: 4deg;
+    }
+    
+        
+    
+        .value-item-header3 h2{
+          color: white;
+          margin-top: 20px;
+          text-align: center;
+    }
+    
+    .value-item-header1:hover, .value-item-header2:hover, .value-item-header3:hover {
+            transform: translateY(-10px);
+    }
   </style>
 
   <body>
@@ -291,16 +335,24 @@
         </h1>
       </div>
       <div class="values">
-        <div class="value-item">
+                  <div class="value-item-header1">
+                    <h2>
+                      Eating
+                    </h2>
         </div>
+        <div class="value-item-header2">
+          <h2>
+            At the beach
+          </h2>
+            </div>
+        <div class="value-item-header3">
+          <h2>
+            With my cousins
+          </h2>
+                </div>
+          
+
         <div class="value-item">
-
-
-        </div>
-        <div class="value-item">
-
-
-        </div>        <div class="value-item">
 
 
         </div>        <div class="value-item">
