@@ -10,7 +10,6 @@
     <style>
       html {
         font-family: "Poppins", sans-serif;
-        height: 4470x;
         margin: 0 auto;
         font-size: 16px;
       }
@@ -30,7 +29,9 @@
       }
 
       img {
-        display: block;
+        display: block; /* AI-Assisted (ChatGPT) to remove gap underneath polaroid images (intro-me-1 & 2.pngs). 
+                         Prompt: Why is there a small gap of transparent space 
+                         at the bottom, How do I get rid of that? */
       }
 
       nav {
@@ -39,7 +40,9 @@
         padding: 30px 0px;
         margin: 0 auto;
         position: relative;
-        z-index: 9999;
+        z-index: 9999; /* AI-Assisted (ChatGPT) to change the order of layers 
+                        Prompt: The nav bar is not working when I hover, 
+                        the intro header image is on top of it, How do I resolve? */
       }
 
       nav a {
@@ -47,7 +50,8 @@
         font-size: 20px;
         font-weight: 600;
         text-decoration: none;
-        transition: color 0.3s ease;
+        transition: color 0.3s ease; /* AI-Assisted (ChatGPT) to achieve a smooth hover animated effect 
+                                     Prompt: How do I make the hover more ease? */
       }
 
       nav a:hover {
@@ -97,7 +101,9 @@
         width: 100%;
         height: auto;
         margin-top: -200px;
-        z-index: -1;
+        z-index: -1; /* AI-Assisted (ChatGPT) to change the order of layers 
+                        Prompt: The nav bar is not working when I hover, 
+                        the intro header image is on top of it, How do I resolve? */
         position: relative;
       }
 
@@ -135,12 +141,14 @@
 
       .top-photo,
       .bottom-photo {
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease; /* AI-Assisted (ChatGPT) to achieve a smooth animated effect
+                                        Prompt: I want to make the images animate up when I hover */
       }
 
       .top-photo:hover,
       .bottom-photo:hover {
-        transform: translateY(-10px);
+        transform: translateY(-10px); /* AI-Assisted (ChatGPT) to achieve a smooth animated effect
+                                      Prompt: I want to make the images animate up when I hover */
       }
 
       .about-preview h1,
@@ -160,7 +168,8 @@
         padding: 15px;
         rotate: -4.13deg;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease; /* AI-Assisted (ChatGPT) to achieve a smooth animated effect
+                                        No prompt, referenced from past use */
       }
 
       .why-seals p {
@@ -208,20 +217,23 @@
       .arrow {
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-50%); /* AI-Assisted (ChatGPT) to properly center arrows.
+                                     Prompt: Why are my arrows not centered?? */
         width: 50px;
         height: 50px;
         border-radius: 50%;
         border: none;
         background-color: #CADBE9;
         color: #003F73;
-        font-size: 30px;
+        font-size: 36px;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
-        transition: transform 0.2s ease, background-color 0.2s ease;
+        transition: transform 0.2s ease, background-color 0.2s ease; /* AI-Assisted (ChatGPT) to achieve a smooth animated effect
+                                                                  Prompt: How do I smoothen the change in colour when I hover? */
       }
 
       .arrow:hover {
-        transform: translateY(-50%) scale(1.1);
+        transform: translateY(-50%) scale(1.1); /* AI-Assisted (ChatGPT) to achieve a smooth animated effect
+                                               Prompt: How do I smoothen the change in colour when I hover? */
         background-color: #8AC7F9;
       }
 
@@ -233,6 +245,15 @@
         right: -20px;
       }
 
+      
+  /*
+Code copied from: https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_shadow
+Author: W3Schools
+Name: CSS Buttons With Shadow
+Description: The CSS box-shadow property is used to add a shadow to a button.
+Date retrieved: November 21, 2025
+      */
+      
       #recent-projects,
       #recent-works {
         border: none;
@@ -246,7 +267,7 @@
         border-radius: 50px;
         margin-right: 20px;
         background-color: #8AC7F9;
-        transition-duration: 0.4s;
+        transition-duration: 0.4s; 
       }
 
       #recent-projects:hover,
