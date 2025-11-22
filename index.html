@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
-      /* When formatting images and text on top of each other, I referenced: 
+  
+/* When formatting images and text on top of each other, I referenced: 
 Code copied from: https://www.w3schools.com/howto/howto_css_image_text.asp
       
 Author: W3Schools
@@ -16,7 +17,7 @@ Name: How TO - Position Text Over an Image
 Description:How to place text over an image
 Date retrieved: November 21, 2025
       */
-
+      
       html {
         font-family: "Poppins", sans-serif;
         margin: 0 auto;
@@ -311,14 +312,11 @@ Date retrieved: November 21, 2025
         position: absolute;
         right: 30px;
         bottom: 970px;
-      }
-
-      .get-in-touch-item {
-        position: relative;
-        z-index: 9999;
-        /* AI-Assisted (ChatGPT) to change the order of layers 
-  No prompt, referenced from past use */
-      }
+        z-index: 0;
+      } 
+      
+.get-in-touch-item { position: relative; z-index: 9999; /* AI-Assisted (ChatGPT) to change the order of layers 
+  No prompt, referenced from past use */ }
 
       .get-in-touch-item h1 {
         margin-bottom: 20px;
@@ -421,7 +419,7 @@ Date retrieved: November 21, 2025
         left: 100px;
         top: 3810px;
         z-index: 9998;
-        /* AI-Assisted (ChatGPT) to change the order of layers 
+         /* AI-Assisted (ChatGPT) to change the order of layers 
                          No prompt, referenced from past use */
       }
 
