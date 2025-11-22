@@ -169,7 +169,7 @@
       .recent-carousel {
         position: absolute;
         width: 1200px;
-        top: 2350px;
+        top: 2320px;
         margin-left: 120px;
       }
 
@@ -188,11 +188,22 @@
         margin: 50px auto 0px auto;
         width: 880px;
         height: 470px;
-        border: 40px solid white;
+        border-top: 40px solid white;
+        border-left: 40px solid white;
+        border-right: 40px solid white;
+        border-bottom: 120px solid white;
         border-radius: 10px;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
       }
 
+#carousel-text {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  color: #003F73;
+  line-height: 0.5em;
+}
+      
       .arrow {
         position: absolute;
         top: 50%;
@@ -417,9 +428,15 @@
 
       <div class="recent-carousel">
         <h1> Dive into my work! </h1> <button id="recent-projects"> Recent Projects </button> <button id="recent-works"> Recent Works </button>
-        <div class="carousel-box">
-          <img src="photos/sentesaur.png" alt="Sentesaur Mockup">
-        </div>
+<div class="carousel-box">
+  <img id="carousel-image" src="photos/sentesaur.png" alt="Carousel Image">
+  <div id="carousel-text">
+    <h2 id="carousel-title"></h2>
+    <p id="carousel-caption"></p>
+  </div>
+  <button id="prev" class="arrow">‹</button>
+  <button id="next" class="arrow">›</button>
+</div>
       </div>
 
 
@@ -488,44 +505,43 @@
       let worksBtn = document.getElementById("recent-works");
       let carouselBox = document.querySelector(".carousel-box");
 
-      let projectImages = [
-        "photos/sentesaur.png",
-        "photos/doorway.png"
-      ];
+let projectImages = [
+  { src: "photos/sentesaur.png", title: "Sentesaur Project", caption: "🥈 2nd Place – UW/UX Flow Designathon" },
+  { src: "photos/doorway.png", title: "Standing in the Doorway", caption: "Markham Museum Exhibition" }
+];
 
-      let workImages = [
-        "photos/magazine-preview.png",
-        "photos/poster-preview.png",
-        "photos/icon-preview.png"
-      ]
+let workImages = [
+  { src: "photos/magazine-preview.png", title: "The Anamoly", caption: "GBDA 101 - Magazine" },
+  { src: "photos/poster-preview.png", title: "Take a Leap", caption: "GBDA 101 - Client Poster" },
+  { src: "photos/icon-preview.png", title: "From Soul to Sole", caption: "GBDA 101 - Footwear Icons" }
+];
 
-      let currentSet = projectImages;
-      let index = 0;
+let currentSet = projectImages;
+let index = 0;
 
-      function updateImage () {
-        carouselBox.innerHTML = `
-          <img src="${currentSet[index]}" alt="Carousel Image">
-            
-        <button id="prev" class="arrow">‹</button>
-        <button id="next" class="arrow">›</button>
-      `;
+function updateImage() {
+  let image = document.getElementById("carousel-image");
+  let title = document.getElementById("carousel-title");
+  let caption = document.getElementById("carousel-caption");
 
-        document.getElementById("prev").onclick = function () {
-          index = index - 1;
-          if (index < 0) {
-            index = currentSet.length - 1;
-          }
-          updateImage();
-        };
+  image.src = currentSet[index].src;
+  title.textContent = currentSet[index].title;
+  caption.textContent = currentSet[index].caption;
+}
 
-        document.getElementById("next").onclick = function () {
-          index = index + 1;
-          if (index >= currentSet.length) {
-            index = 0;
-          }
-          updateImage();
-        };
-      }
+document.getElementById("prev").onclick = function() {
+  index--;
+  if (index < 0) index = currentSet.length - 1;
+  updateImage();
+};
+
+document.getElementById("next").onclick = function() {
+  index++;
+  if (index >= currentSet.length) index = 0;
+  updateImage();
+};
+      
+updateImage();
 
       let defaultColor = "#8AC7F9";
       projectsBtn.onclick = function () {
