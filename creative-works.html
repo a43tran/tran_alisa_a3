@@ -30,6 +30,10 @@
       color: #003F73;
     }
 
+    img {
+      display: block;
+    }
+
     nav {
       text-align: center;
       max-width: 1200px;
@@ -75,6 +79,7 @@
       margin: 0 auto;
     }
 
+
     .container {
       width: 1200px;
       margin: 0 auto;
@@ -94,32 +99,33 @@
     .header {
       margin-left: 120px;
     }
-    
+
     .header h1 {
       top: 200px;
     }
-    
-        #trad-art,
-      #mixed-media, #digital-design {
-        border: none;
-        color: white;
-        padding: 10px 50px;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        border-radius: 50px;
-        margin-right: 20px;
-        background-color: #8AC7F9;
-        transition-duration: 0.4s;
-      }
 
-      #trad-art:hover,
-      #mixed-media:hover, #digital-design:hover {
-        box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.1);
-      }
- 
+    #trad-art,
+    #mixed-media,
+    #digital-design {
+      border: none;
+      color: white;
+      padding: 10px 50px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      border-radius: 50px;
+      margin-right: 20px;
+      background-color: #8AC7F9;
+      transition-duration: 0.4s;
+    }
+
+    #trad-art:hover,
+    #mixed-media:hover,
+    #digital-design:hover {
+      box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.1);
+    }
   </style>
 
   <body>
@@ -136,9 +142,9 @@
     <div class="container">
       <div class="header">
         <h1> Creative Works </h1>
-      <button id="trad-art"> Traditional Art </button> 
+        <button id="trad-art"> Traditional Art </button>
         <button id="mixed-media"> Mixed Media </button>
-              <button id="digital-design"> Digital Design </button>
+        <button id="digital-design"> Digital Design </button>
       </div>
     </div>
 
@@ -158,12 +164,12 @@
     mixedMediaBtn.onclick = function () {
       mixedMediaBtn.style.backgroundColor = "#1D76C0";
       tradArtBtn.style.backgroundColor = defaultColor;
-          digDesignBtn.style.backgroundColor = defaultColor;
+      digDesignBtn.style.backgroundColor = defaultColor;
     };
-      digDesignBtn.onclick = function () {
+    digDesignBtn.onclick = function () {
       digDesignBtn.style.backgroundColor = "#1D76C0";
       tradArtBtn.style.backgroundColor = defaultColor;
-          mixedMediaBtn.style.backgroundColor = defaultColor;
+      mixedMediaBtn.style.backgroundColor = defaultColor;
     };
   </script>
 
