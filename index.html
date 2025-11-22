@@ -29,7 +29,8 @@
       }
 
       img {
-        display: block; /* AI-Assisted (ChatGPT) to remove gap underneath polaroid images (intro-me-1 & 2.pngs). 
+        display: block;
+        /* AI-Assisted (ChatGPT) to remove gap underneath polaroid images (intro-me-1 & 2.pngs). 
                          Prompt: Why is there a small gap of transparent space 
                          at the bottom, How do I get rid of that? */
       }
@@ -40,7 +41,8 @@
         padding: 30px 0px;
         margin: 0 auto;
         position: relative;
-        z-index: 9999; /* AI-Assisted (ChatGPT) to change the order of layers 
+        z-index: 9999;
+        /* AI-Assisted (ChatGPT) to change the order of layers 
                         Prompt: The nav bar is not working when I hover, 
                         the intro header image is on top of it, How do I resolve? */
       }
@@ -50,7 +52,8 @@
         font-size: 20px;
         font-weight: 600;
         text-decoration: none;
-        transition: color 0.3s ease; /* AI-Assisted (ChatGPT) to achieve a smooth hover animated effect 
+        transition: color 0.3s ease;
+        /* AI-Assisted (ChatGPT) to achieve a smooth hover animated effect 
                                      Prompt: How do I make the hover more ease? */
       }
 
@@ -101,7 +104,8 @@
         width: 100%;
         height: auto;
         margin-top: -200px;
-        z-index: -1; /* AI-Assisted (ChatGPT) to change the order of layers 
+        z-index: -1;
+        /* AI-Assisted (ChatGPT) to change the order of layers 
                         Prompt: The nav bar is not working when I hover, 
                         the intro header image is on top of it, How do I resolve? */
         position: relative;
@@ -141,13 +145,15 @@
 
       .top-photo,
       .bottom-photo {
-        transition: transform 0.3s ease; /* AI-Assisted (ChatGPT) to achieve a smooth animated effect
+        transition: transform 0.3s ease;
+        /* AI-Assisted (ChatGPT) to achieve a smooth rise animated effect
                                         Prompt: I want to make the images animate up when I hover */
       }
 
       .top-photo:hover,
       .bottom-photo:hover {
-        transform: translateY(-10px); /* AI-Assisted (ChatGPT) to achieve a smooth animated effect
+        transform: translateY(-10px);
+        /* AI-Assisted (ChatGPT) to achieve a smooth rise animated effect
                                       Prompt: I want to make the images animate up when I hover */
       }
 
@@ -168,7 +174,8 @@
         padding: 15px;
         rotate: -4.13deg;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease; /* AI-Assisted (ChatGPT) to achieve a smooth animated effect
+        transition: transform 0.3s ease;
+        /* AI-Assisted (ChatGPT) to achieve a smooth animated effect
                                         No prompt, referenced from past use */
       }
 
@@ -206,18 +213,19 @@
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
       }
 
-#carousel-text {
-  position: absolute;
-  bottom: 30px;
-  left: 50px;
-  color: #003F73;
-  line-height: 0.5em;
-}
-      
+      #carousel-text {
+        position: absolute;
+        bottom: 30px;
+        left: 50px;
+        color: #003F73;
+        line-height: 0.5em;
+      }
+
       .arrow {
         position: absolute;
         top: 50%;
-        transform: translateY(-50%); /* AI-Assisted (ChatGPT) to properly center arrows.
+        transform: translateY(-50%);
+        /* AI-Assisted (ChatGPT) to properly center arrows.
                                      Prompt: Why are my arrows not centered?? */
         width: 50px;
         height: 50px;
@@ -227,12 +235,14 @@
         color: #003F73;
         font-size: 36px;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
-        transition: transform 0.2s ease, background-color 0.2s ease; /* AI-Assisted (ChatGPT) to achieve a smooth animated effect
+        transition: transform 0.2s ease, background-color 0.2s ease;
+        /* AI-Assisted (ChatGPT) to achieve a smooth animated effect
                                                                   Prompt: How do I smoothen the change in colour when I hover? */
       }
 
       .arrow:hover {
-        transform: translateY(-50%) scale(1.1); /* AI-Assisted (ChatGPT) to achieve a smooth animated effect
+        transform: translateY(-50%) scale(1.1);
+        /* AI-Assisted (ChatGPT) to achieve a smooth animated effect
                                                Prompt: How do I smoothen the change in colour when I hover? */
         background-color: #8AC7F9;
       }
@@ -245,15 +255,18 @@
         right: -20px;
       }
 
-      
-  /*
+      /*
 Code copied from: https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_shadow
+Specifically, these parts:
+- "transition-duration: 0.4s;"
+- "box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.1);"
+      
 Author: W3Schools
 Name: CSS Buttons With Shadow
 Description: The CSS box-shadow property is used to add a shadow to a button.
 Date retrieved: November 21, 2025
       */
-      
+
       #recent-projects,
       #recent-works {
         border: none;
@@ -267,7 +280,7 @@ Date retrieved: November 21, 2025
         border-radius: 50px;
         margin-right: 20px;
         background-color: #8AC7F9;
-        transition-duration: 0.4s; 
+        transition-duration: 0.4s;
       }
 
       #recent-projects:hover,
@@ -282,7 +295,7 @@ Date retrieved: November 21, 2025
         margin-top: 1550px;
         padding: 0 120px;
       }
-      
+
       .get-in-touch-img {
         position: absolute;
         right: 30px;
@@ -292,17 +305,19 @@ Date retrieved: November 21, 2025
       .get-in-touch-item {
         position: relative;
         z-index: 9999;
+        /* AI-Assisted (ChatGPT) to change the order of layers 
+                         No prompt, referenced from past use */
       }
 
       .get-in-touch-item h1 {
         margin-bottom: 20px;
       }
 
-
       .why-seals h1:hover {
         transform: translateY(-10px);
+        /* AI-Assisted (ChatGPT) to achieve a smooth rise animated effect
+                                      No prompt, referenced from past use */
       }
-
 
       .get-in-touch-item p {
         width: 520px;
@@ -328,6 +343,8 @@ Date retrieved: November 21, 2025
       .get-in-touch-form {
         margin-top: 125px;
         z-index: 9999;
+        /* AI-Assisted (ChatGPT) to change the order of layers 
+                         No prompt, referenced from past use */
       }
 
       input {
@@ -341,6 +358,18 @@ Date retrieved: November 21, 2025
         font-family: "Poppins", sans-serif;
         font-weight: 400px;
       }
+
+      /*
+Code copied from: https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_shadow
+Specifically, these parts:
+- "transition-duration: 0.4s;"
+- "box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.1);"
+      
+Author: W3Schools
+Name: CSS Buttons With Shadow
+Description: The CSS box-shadow property is used to add a shadow to a button.
+Date retrieved: November 21, 2025
+      */
 
       input[type="submit"] {
         width: 160px;
@@ -378,6 +407,8 @@ Date retrieved: November 21, 2025
         left: 120px;
         top: 4000px;
         z-index: 9999;
+        /* AI-Assisted (ChatGPT) to change the order of layers 
+                         No prompt, referenced from past use */
       }
 
       .footer-seal {
@@ -450,25 +481,28 @@ Date retrieved: November 21, 2025
 
       <div class="recent-carousel">
         <h1> Dive into my work! </h1> <button id="recent-projects"> Recent Projects </button> <button id="recent-works"> Recent Works </button>
-<div class="carousel-box">
-  <img id="carousel-image" src="photos/sentesaur.png" alt="Carousel Image">
-  <div id="carousel-text">
-    <h2 id="carousel-title"></h2>
-    <p id="carousel-caption"></p>
-  </div>
-  <button id="prev" class="arrow">‹</button>
-  <button id="next" class="arrow">›</button>
-</div>
+        <div class="carousel-box">
+
+          <!-- AI-Assisted (ChatGPT) to make carousel with title & caption undeerneath
+            Prompt: How do i add text to this, like in the title of every carousel slide 
+                    i want to include a little title and caption underneath that changes 
+                    when I click through. -->
+
+          <img id="carousel-image" src="photos/sentesaur.png" alt="Carousel Image">
+          <div id="carousel-text">
+            <h2 id="carousel-title"></h2>
+            <p id="carousel-caption"></p>
+          </div>
+          <button id="prev" class="arrow">‹</button>
+          <button id="next" class="arrow">›</button>
+        </div>
       </div>
-
-
-
 
       <div class="get-in-touch-container">
         <div class="get-in-touch-img">
           <img src="photos/seal-sit.svg" alt="Seal with easel, painting">
         </div>
-                  <div class="get-in-touch-item">
+        <div class="get-in-touch-item">
           <h1>
             Get in Touch!
           </h1>
@@ -483,7 +517,13 @@ Date retrieved: November 21, 2025
             <li><a href="https://www.tiktok.com/@alisatrn" target="_blank"><img src="photos/tiktok.svg" alt="TikTok Logo"></a></li>
           </ul>
 
-
+      <!--
+Code copied from: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_placeholder
+Author: W3Schools
+Name: HTML <input> placeholder Attribute
+Description: A telephone input field with a placeholder text.
+Date retrieved: November 21, 2025
+      -->
 
         </div>
         <div class="get-in-touch-form">
@@ -519,51 +559,65 @@ Date retrieved: November 21, 2025
     </div>
 
 
-
-
-
     <script>
       let projectsBtn = document.getElementById("recent-projects");
       let worksBtn = document.getElementById("recent-works");
-      let carouselBox = document.querySelector(".carousel-box");
 
-let projectImages = [
-  { src: "photos/sentesaur.png", title: "Sentesaur Project", caption: "🥈 2nd Place – UW/UX Flow Designathon" },
-  { src: "photos/doorway.png", title: "Standing in the Doorway", caption: "Markham Museum Exhibition" }
-];
+      let projectImages = [{
+          src: "photos/sentesaur.png",
+          title: "Sentesaur Project",
+          caption: "🥈 2nd Place – UW/UX Flow Designathon"
+        },
+        {
+          src: "photos/doorway.png",
+          title: "Standing in the Doorway",
+          caption: "Markham Museum Exhibition"
+        }
+      ];
 
-let workImages = [
-  { src: "photos/magazine-preview.png", title: "The Anamoly", caption: "GBDA 101 - Magazine" },
-  { src: "photos/poster-preview.png", title: "Take a Leap", caption: "GBDA 101 - Client Poster" },
-  { src: "photos/icon-preview.png", title: "From Soul to Sole", caption: "GBDA 101 - Footwear Icons" }
-];
+      let workImages = [{
+          src: "photos/magazine-preview.png",
+          title: "The Anamoly",
+          caption: "GBDA 101 - Magazine"
+        },
+        {
+          src: "photos/poster-preview.png",
+          title: "Take a Leap",
+          caption: "GBDA 101 - Client Poster"
+        },
+        {
+          src: "photos/icon-preview.png",
+          title: "From Soul to Sole",
+          caption: "GBDA 101 - Footwear Icons"
+        }
+      ];
 
-let currentSet = projectImages;
-let index = 0;
+      let currentSet = projectImages;
+      let index = 0;
 
-function updateImage() {
-  let image = document.getElementById("carousel-image");
-  let title = document.getElementById("carousel-title");
-  let caption = document.getElementById("carousel-caption");
+      function updateImage () {
+        let image = document.getElementById("carousel-image");
+        let title = document.getElementById("carousel-title");
+        let caption = document.getElementById("carousel-caption");
 
-  image.src = currentSet[index].src;
-  title.textContent = currentSet[index].title;
-  caption.textContent = currentSet[index].caption;
-}
+        image.src = currentSet[index].src;
+        title.textContent = currentSet[index].title;
+        caption.textContent = currentSet[index].caption;
+      }
 
-document.getElementById("prev").onclick = function() {
-  index--;
-  if (index < 0) index = currentSet.length - 1;
-  updateImage();
-};
+      document.getElementById("prev").onclick = function () {
+        index--;
+        if (index < 0) index = currentSet.length - 1;
+        updateImage();
+      };
 
-document.getElementById("next").onclick = function() {
-  index++;
-  if (index >= currentSet.length) index = 0;
-  updateImage();
-};
-      
-updateImage();
+      document.getElementById("next").onclick = function () {
+        index++;
+        if (index >= currentSet.length) index = 0;
+        updateImage();
+      };
+
+      updateImage();
 
       let defaultColor = "#8AC7F9";
       projectsBtn.onclick = function () {
