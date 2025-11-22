@@ -177,12 +177,12 @@
         margin-bottom: 20px;
         margin-top: 220px;
       }
-      
+
       .carousel-box {
         width: 980px;
         position: relative;
       }
-      
+
       .carousel-box img {
         display: block;
         margin: 50px auto 0px auto;
@@ -192,7 +192,7 @@
         border-radius: 10px;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
       }
-      
+
       .arrow {
         position: absolute;
         top: 50%;
@@ -204,19 +204,19 @@
         background-color: #CADBE9;
         color: #003F73;
         font-size: 30px;
-              box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
         transition: transform 0.2s ease, background-color 0.2s ease;
       }
-      
+
       .arrow:hover {
         transform: translateY(-50%) scale(1.1);
         background-color: #8AC7F9;
       }
-      
+
       #prev {
         left: -20px;
       }
-      
+
       #next {
         right: -20px;
       }
@@ -258,7 +258,7 @@
       .get-in-touch-item h1 {
         margin-bottom: 20px;
       }
-      
+
 
       .why-seals h1:hover {
         transform: translateY(-10px);
@@ -379,9 +379,9 @@
         <li><a href="about-me.html">ABOUT ME</a></li>
       </ul>
     </nav>
-    
-    
-    
+
+
+
     <div class="container">
       <div class="intro"> <img src="photos/intro-header.svg" alt="Seal in a mini lake, surrounded by rocks and grass">
         <div class="intro-text">
@@ -389,9 +389,9 @@
           <p> Welcome to my creative shore, filled with waves of various works and projects throughout my design journey, even seal-ly ones. </p>
         </div>
       </div>
-      
-      
-      
+
+
+
       <div class="about-preview">
         <div class="top-photo"> <img src="photos/intro-me-2.png" alt="Alisa Tran with a shark"> </div>
         <div class="bottom-photo"> <img src="photos/intro-me-1.png" alt="Alisa Tran's face"> </div>
@@ -402,22 +402,22 @@
           <p> My favourite animal of all time are SEALS, specifically Baikal seals! I just think they’re so adorable with their big eyes and floppy little flippers! They’re such playful and expressive creatures that can frolic on land and water. One of my bucket list items is to see a seal in person one day! </p>
           <p> I try to encapsulate the free-flowing, fluid nature of seals through my creative work. Whether it’s through soft and organic shapes to lively, experimental designs, I approach design with an open mind, adapting and having fun as the process unfolds. </p>
         </div>
-        
-        
-        
+
+
+
       </div>
       <div class="background-water"> <img src="photos/background-water.svg" alt="Seals in water"> </div>
-      
-      
+
+
       <div class="recent-carousel">
         <h1> Dive into my work! </h1> <button id="recent-projects"> Recent Projects </button> <button id="recent-works"> Recent Works </button>
         <div class="carousel-box">
-         <img src="photos/sentesaur.png" alt="Sentesaur Mockup">
+          <img src="photos/sentesaur.png" alt="Sentesaur Mockup">
         </div>
       </div>
 
-      
-      
+
+
 
       <div class="get-in-touch-container">
         <div class="get-in-touch-item">
@@ -435,8 +435,8 @@
             <li><a href="https://www.tiktok.com/@alisatrn" target="_blank"><img src="photos/tiktok.svg" alt="TikTok Logo"></a></li>
           </ul>
 
-          
-          
+
+
         </div>
         <div class="get-in-touch-form">
           <form action="/action_page.php">
@@ -469,36 +469,36 @@
         </p>
       </div>
     </div>
-    
-    
-    
-    
+
+
+
+
 
     <script>
       let projectsBtn = document.getElementById("recent-projects");
       let worksBtn = document.getElementById("recent-works");
       let carouselBox = document.querySelector(".carousel-box");
-      
+
       let projectImages = [
         "photos/sentesaur.png",
         "photos/doorway.png"
       ];
-      
+
       let workImages = [
         "photos/magazine-preview.png",
       ]
-      
+
       let currentSet = projectImages;
       let index = 0;
-      
-      function updateImage() {
+
+      function updateImage () {
         carouselBox.innerHTML = `
           <img src="${currentSet[index]}" alt="Carousel Image">
             
         <button id="prev" class="arrow">‹</button>
         <button id="next" class="arrow">›</button>
       `;
-        
+
         document.getElementById("prev").onclick = function () {
           index = index - 1;
           if (index < 0) {
@@ -506,7 +506,7 @@
           }
           updateImage();
         };
-        
+
         document.getElementById("next").onclick = function () {
           index = index + 1;
           if (index >= currentSet.length) {
@@ -515,13 +515,13 @@
           updateImage();
         };
       }
-      
+
       let defaultColor = "#8AC7F9";
       projectsBtn.onclick = function () {
         currentSet = projectImages;
         index = 0;
         updateImage();
-        
+
         projectsBtn.style.backgroundColor = "#1D76C0";
         worksBtn.style.backgroundColor = defaultColor;
       };
@@ -529,11 +529,11 @@
         currentSet = workImages;
         index = 0;
         updateImage();
-        
+
         worksBtn.style.backgroundColor = "#1D76C0";
         projectsBtn.style.backgroundColor = defaultColor;
       };
-      
+
       updateImage();
     </script>
 
