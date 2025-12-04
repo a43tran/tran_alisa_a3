@@ -34,9 +34,9 @@
       color: #003F73;
       font-size: 2em;
     }
-    
+
     h3 {
-       color: #62A7DE;
+      color: #62A7DE;
       font-size: 1.5em;
     }
 
@@ -109,15 +109,15 @@
     }
 
     .header {
-    padding: 0 120px;
-    }
-
-    .header p {
-      margin-bottom: 40px;
+      padding: 0 120px;
     }
 
     .header h1 {
       margin-top: 100px;
+    }
+
+    .header p {
+      margin-bottom: 40px;
     }
 
     .footer {
@@ -140,13 +140,29 @@
       color: white;
       text-align: center;
     }
+    
+    .arrow {
+      width: 50px;
+      margin-left: 150px;
+      margin-top: 10px;
+      position: absolute;
+      transition: transform 0.3s ease;
+    }
 
+    .arrow:hover {
+      filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.1));
+    }
+    
     .artwork {
       display: grid;
       grid-template-columns: 50% 50%;
       gap: 50px;
       max-width: 1200px;
       padding: 0 120px;
+    }
+
+    .artwork-item p {
+      margin-bottom: 40px;
     }
 
     .artwork-item img {
@@ -169,28 +185,6 @@
       margin-bottom: 40px;
     }
 
-    .artwork-item p {
-      margin-bottom: 40px;
-    }
-
-    .arrow {
-      width: 50px;
-      margin-left: 150px;
-      margin-top: 10px;
-      position: absolute;
-      transition: transform 0.3s ease;
-    }
-    
-    .arrow:hover {
-      filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.1));
-    }
-
-    .artwork-item img:hover {
-      transform: translateY(-10px);
-      /* AI-Assisted (ChatGPT) to achieve a smooth rise animated effect 
-        No prompt, referenced from past use */
-    }
-
     .artwork-ingredients {
       margin-bottom: 40px;
       padding: 0 120px;
@@ -206,12 +200,7 @@
       width: 450px;
       overflow: hidden;
     }
-
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-
+    
     .ingredients-carousel img {
       width: 450px;
       height: auto;
@@ -231,7 +220,7 @@
       /* AI-Assisted (ChatGPT) to achieve a smooth animated effect
                                       Prompt: How do I smoothen the change in colour when I hover? */
     }
-
+    
     .carousel-btn.prev {
       left: -20px;
     }
@@ -246,6 +235,18 @@
                                        Prompt: How do I smoothen the change in colour when I hover? */
     }
 
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    
+      .process-item img {
+      width: 450px;
+      height: 340px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    
     .process-pics img {
       margin-bottom: 40px;
       width: 450px;
@@ -261,7 +262,7 @@
     .artistic-influence h3 {
       margin-top: -10px;
     }
-    
+
     .artistic-influence p {
       margin-bottom: 230px;
     }
@@ -277,12 +278,9 @@
       margin-top: -20px;
       margin-bottom: 80px;
     }
-    
-    .process-item img {
-      width: 450px;
-      height: 340px;
-      border-radius: 10px;
-      object-fit: cover;
+
+    .artwork-item img:hover {
+      transform: translateY(-10px);
       /* AI-Assisted (ChatGPT) to achieve a smooth rise animated effect 
         No prompt, referenced from past use */
     }
