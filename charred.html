@@ -385,13 +385,13 @@
             </p>
           </div>
         </div>
-
+        
+     <!-- The Process -->
         <div class="header">
           <h2>
             The Process
           </h2>
         </div>
-
         <div class="artwork">
           <div class="process-pics">
             <div class="process-item">
@@ -410,6 +410,7 @@
           </div>
         </div>
 
+     <!-- Artistic Influence -->
         <div class="header">
           <h2>
             Artistic Influence
@@ -441,15 +442,15 @@
             </div>
             <img src="mixed-media/marc-quinn.jpg" alt="Emotional Detox sculptures">
             <div class="artistic-influence-caption">
-
               <h4>
                 Museum Van de Guest. (2024, February 20). <i>Emotional Detox | Marc Quinn.</i>Museum Van de Guest. https://museumvandegeest.nl/kunstwerken/emotional-detox-marc-quinn/
               </h4>
             </div>
           </div>
-          
           <img src="mixed-media/soysauce-seal.svg" alt="Seal with a soysauce bottle in its mouth" class="soysauce-seal">
         </div>
+        
+     <!-- Footer -->
         <div class="footer">
           <a href="index.html"><img src="photos/logo.svg" alt="Alisa Tran's logo"></a>
           <p>
@@ -459,6 +460,11 @@
       </div>
     </div>
 
+     <!-- All JavaScript is AI-Assisted (ChatGPT) to create image carousel and buttons in the carousel 
+      Prompt: How do I input a carousel in the ingredients section of vertical pictures? 
+      Prompt: How do I move the arrows to be on the carousel sides? 
+      Prompt: How do I make the carousel continuous and not teleport to first image after the last one? -->
+
     <script>
       const track = document.querySelector(".carousel-track");
       const images = document.querySelectorAll(".carousel-track img");
@@ -466,7 +472,6 @@
 
       let index = 0;
 
-      // Clone first and last slides
       const firstClone = images[0].cloneNode(true);
       const lastClone = images[images.length - 1].cloneNode(true);
 
@@ -475,7 +480,6 @@
 
       const totalSlides = track.querySelectorAll("img").length;
 
-      // Start at first real slide
       index = 1;
       track.style.transform = `translateX(${-index * slideWidth}px)`;
 
@@ -497,14 +501,14 @@
       };
 
       track.addEventListener("transitionend", () => {
-        if (index === totalSlides - 1) { // If at cloned first slide
+        if (index === totalSlides - 1) { 
           track.style.transition = "none";
-          index = 1; // Jump to real first slide
+          index = 1; 
           track.style.transform = `translateX(${-index * slideWidth}px)`;
         }
-        if (index === 0) { // If at cloned last slide
+        if (index === 0) {
           track.style.transition = "none";
-          index = totalSlides - 2; // Jump to real last slide
+          index = totalSlides - 2; 
           track.style.transform = `translateX(${-index * slideWidth}px)`;
         }
       });
