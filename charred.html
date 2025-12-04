@@ -185,6 +185,44 @@
       /* AI-Assisted (ChatGPT) to achieve a smooth rise animated effect 
         No prompt, referenced from past use */
     }
+    
+.ingredients-carousel {
+  position: relative;
+  width: 400px;      /* adjust to match your vertical image width */
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.ingredients-carousel img {
+  width: 400px;      /* same width as container */
+  height: auto;
+  border-radius: 10px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.6);
+}
   </style>
 
   <body>
@@ -259,6 +297,9 @@
               <img src="mixed-media/enoki.jpg" alt="">
               <img src="mixed-media/noodle.jpg" alt="">
             </div>
+              <button class="carousel-btn prev">‹</button>
+  <button class="carousel-btn next">›</button>
+</div>
           </div>
         </div>
 
@@ -271,6 +312,27 @@
       </div>
     </div>
 
+<script>
+const track = document.querySelector(".carousel-track");
+const images = document.querySelectorAll(".ingredients-carousel img");
 
+let index = 0;
+
+document.querySelector(".next").onclick = () => {
+  index++;
+  if (index >= images.length) index = 0;
+  updateCarousel();
+};
+
+document.querySelector(".prev").onclick = () => {
+  index--;
+  if (index < 0) index = images.length - 1;
+  updateCarousel();
+};
+
+function updateCarousel() {
+  track.style.transform = "translateX(" + (-index * 400) + "px)";
+}
+</script>
   </body>
 </html>
