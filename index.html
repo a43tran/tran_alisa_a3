@@ -598,98 +598,125 @@ Date retrieved: November 21, 2025
               two different carrousels based on pressing different buttons? -->
 
     <script>
-      const projectsBtn = document.getElementById("recent-projects");
-      const worksBtn = document.getElementById("recent-works");
-      const track = document.querySelector(".carousel-track");
+  const projectsBtn = document.getElementById("recent-projects");
+  const worksBtn = document.getElementById("recent-works");
+  const track = document.querySelector(".carousel-track");
 
-      const projectImages = [{
-          src: "photos/sentesaurs.png",
-          title: "Sentesaur Project",
-          caption: "2nd Place – UW/UX Flow Designathon",
-          link: "sentesaurs.html"
-        },
-        {
-          src: "photos/doorway.png",
-          title: "Standing in the Doorway",
-          caption: "Markham Museum Exhibition"
-        }
-      ];
+  const projectImages = [
+    { src: "photos/sentesaurs.png", title: "Sentesaur Project", caption: "2nd Place – UW/UX Flow Designathon", link: "sentesaurs.html" },
+    { src: "photos/doorway.png", title: "Standing in the Doorway", caption: "Markham Museum Exhibition" }
+  ];
 
-      const workImages = [{
-          src: "photos/magazine-preview.png",
-          title: "The Anamoly",
-          caption: "GBDA 101 - Magazine"
-        },
-        {
-          src: "photos/poster-preview.png",
-          title: "Take a Leap",
-          caption: "GBDA 101 - Client Poster"
-        },
-        {
-          src: "photos/icon-preview.png",
-          title: "From Soul to Sole",
-          caption: "GBDA 101 - Footwear Icons"
-        }
-      ];
+  const workImages = [
+    { src: "photos/magazine-preview.png", title: "The Anamoly", caption: "GBDA 101 - Magazine" },
+    { src: "photos/poster-preview.png", title: "Take a Leap", caption: "GBDA 101 - Client Poster" },
+    { src: "photos/icon-preview.png", title: "From Soul to Sole", caption: "GBDA 101 - Footwear Icons" }
+  ];
 
-      let currentSet = projectImages;
-      let index = 0;
+  let currentSet = projectImages;
+  let index = 1; // ALWAYS start on first real slide
 
-      function buildCarousel (set) {
-        track.innerHTML = "";
+  // Create slide (<a><img></a>)
+  function createSlide(item) {
+    const a = document.createElement("a");
+    a.href = item.link || "#";
 
-        set.forEach(item => {
-          const link = document.createElement("a");
-          link.href = item.link || "#";
+    const img = document.createElement("img");
+    img.src = item.src;
+    img.alt = item.title;
 
-          const img = document.createElement("img");
-          img.src = item.src;
-          img.alt = item.title;
+    a.appendChild(img);
+    return a;
+  }
 
-          link.appendChild(img);
-          track.appendChild(link);
-        });
-        index = 0;
-        updateCarousel();
-        updateText();
-      }
+  // Build carousel with clones
+  function buildCarousel(set) {
+    track.innerHTML = "";
 
-      function updateCarousel () {
-        track.style.transform = `translateX(${-index * 960}px)`;
-      }
+    // Clone last → beginning
+    const lastClone = createSlide(set[set.length - 1]);
+    lastClone.classList.add("clone");
+    track.appendChild(lastClone);
 
-      function updateText () {
-        const title = document.getElementById("carousel-title");
-        const caption = document.getElementById("carousel-caption");
-        if (currentSet[index]) {
-          title.textContent = currentSet[index].title;
-          caption.textContent = currentSet[index].caption;
-        }
-      }
+    // Real slides
+    set.forEach(item => track.appendChild(createSlide(item)));
 
-      document.getElementById("next").onclick = () => {
-        index++;
-        if (index >= currentSet.length) index = 0;
-        updateCarousel();
-        updateText();
-      };
+    // Clone first → end
+    const firstClone = createSlide(set[0]);
+    firstClone.classList.add("clone");
+    track.appendChild(firstClone);
 
-      document.getElementById("prev").onclick = () => {
-        index--;
-        if (index < 0) index = currentSet.length - 1;
-        updateCarousel();
-        updateText();
-      };
+    index = 1;
+    track.style.transition = "transform 0.4s ease";
+    updateCarousel();
+    updateText();
+  }
 
-      function activateSet (set) {
-        currentSet = set;
-        buildCarousel(currentSet);
-      }
+  // Slide movement
+  function updateCarousel() {
+    track.style.transform = `translateX(${-index * 960}px)`;
+  }
 
-      projectsBtn.onclick = () => activateSet(projectImages);
-      worksBtn.onclick = () => activateSet(workImages);
+  // Title + caption update
+  function updateText() {
+    const title = document.getElementById("carousel-title");
+    const caption = document.getElementById("carousel-caption");
 
-      buildCarousel(projectImages);
+    const realIndex = (index - 1 + currentSet.length) % currentSet.length;
+    title.textContent = currentSet[realIndex].title;
+    caption.textContent = currentSet[realIndex].caption;
+  }
+
+  // Infinite loop detection
+  track.addEventListener("transitionend", () => {
+    const slides = track.querySelectorAll("a");
+
+    // If on last clone (right side)
+    if (slides[index].classList.contains("clone") && index === slides.length - 1) {
+      track.style.transition = "none";
+      index = 1; // go to first REAL slide
+      updateCarousel();
+      setTimeout(() => track.style.transition = "transform 0.4s ease", 20);
+    }
+
+    // If on first clone (left side)
+    if (slides[index].classList.contains("clone") && index === 0) {
+      track.style.transition = "none";
+      index = currentSet.length; // last REAL slide
+      updateCarousel();
+      setTimeout(() => track.style.transition = "transform 0.4s ease", 20);
+    }
+  });
+
+  // Buttons
+  document.getElementById("next").onclick = () => {
+    const slides = track.querySelectorAll("a");
+    if (index < slides.length - 1) {
+      index++;
+      updateCarousel();
+      updateText();
+    }
+  };
+
+  document.getElementById("prev").onclick = () => {
+    if (index > 0) {
+      index--;
+      updateCarousel();
+      updateText();
+    }
+  };
+
+  // Switching sets
+  function activateSet(set) {
+    currentSet = set;
+    buildCarousel(currentSet);
+  }
+
+  projectsBtn.onclick = () => activateSet(projectImages);
+  worksBtn.onclick = () => activateSet(workImages);
+
+  // Init
+  buildCarousel(projectImages);
     </script>
   </body>
 </html>
