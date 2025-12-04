@@ -213,11 +213,33 @@ Date retrieved: November 21, 2025
         margin-bottom: 20px;
         margin-top: 190px;
       }
-
-      .carousel-box {
-        width: 980px;
-        position: relative;
+      
+      .carousel {
+                          position: relative;
+  width: 960px;
+  overflow: visible;
       }
+      
+      .carousel-box {
+  width: 960px;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+  width: 960px;
+  flex-shrink: 0;
+  border-top: 40px solid white;
+  border-left: 40px solid white;
+  border-right: 40px solid white;
+  border-bottom: 120px solid white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
 
       .carousel-box img {
         display: block;
@@ -490,6 +512,7 @@ Date retrieved: November 21, 2025
 
       <div class="recent-carousel">
         <h1> Dive into my work! </h1> <button id="recent-projects"> Recent Projects </button> <button id="recent-works"> Recent Works </button>
+       <div class="carousel">
         <div class="carousel-box">
 
           <!-- AI-Assisted (ChatGPT) to make carousel with title & caption undeerneath
@@ -497,16 +520,17 @@ Date retrieved: November 21, 2025
      I want to include a little title and caption underneath that changes 
     when I click through. -->
 
-          <img id="carousel-image" src="photos/sentesaurs.png" alt="Carousel Image">
-          <div id="carousel-text">
-            <h2 id="carousel-title"></h2>
-            <p id="carousel-caption"></p>
-          </div>
+     <div class="carousel-track">   </div>
+  <div id="carousel-text">
+    <h2 id="carousel-title"></h2>
+    <p id="carousel-caption"></p>
+  </div>
+
           <button id="prev" class="arrow">‹</button>
           <button id="next" class="arrow">›</button>
         </div>
       </div>
-
+       </div>
       <div class="get-in-touch-container">
         <div class="get-in-touch-img">
           <img src="photos/seal-sit.svg" alt="Seal with easel, painting">
@@ -579,77 +603,79 @@ Date retrieved: November 21, 2025
               two different carrousels based on pressing different buttons? -->
 
     <script>
-      let projectsBtn = document.getElementById("recent-projects");
-      let worksBtn = document.getElementById("recent-works");
+const projectsBtn = document.getElementById("recent-projects");
+const worksBtn = document.getElementById("recent-works");
+const track = document.querySelector(".carousel-track");
 
-      let projectImages = [{
-          src: "photos/sentesaurs.png",
-          title: "Sentesaur Project",
-          caption: "🥈 2nd Place – UW/UX Flow Designathon"
-        },
-        {
-          src: "photos/doorway.png",
-          title: "Standing in the Doorway",
-          caption: "Markham Museum Exhibition"
-        }
-      ];
+const projectImages = [
+  { src: "photos/sentesaurs.png", title: "Sentesaur Project", caption: "2nd Place – UW/UX Flow Designathon", link: "sentesaurs.html" },
+  { src: "photos/doorway.png", title: "Standing in the Doorway", caption: "Markham Museum Exhibition" }
+];
 
-      let workImages = [{
-          src: "photos/magazine-preview.png",
-          title: "The Anamoly",
-          caption: "GBDA 101 - Magazine"
-        },
-        {
-          src: "photos/poster-preview.png",
-          title: "Take a Leap",
-          caption: "GBDA 101 - Client Poster"
-        },
-        {
-          src: "photos/icon-preview.png",
-          title: "From Soul to Sole",
-          caption: "GBDA 101 - Footwear Icons"
-        }
-      ];
+const workImages = [
+  { src: "photos/magazine-preview.png", title: "The Anamoly", caption: "GBDA 101 - Magazine" },
+  { src: "photos/poster-preview.png", title: "Take a Leap", caption: "GBDA 101 - Client Poster" },
+  { src: "photos/icon-preview.png", title: "From Soul to Sole", caption: "GBDA 101 - Footwear Icons" }
+];
 
-      let currentSet = projectImages;
-      let index = 0;
+let currentSet = projectImages;
+let index = 0;
 
-      function updateImage () {
-        document.getElementById("carousel-image").src = currentSet[index].src;
-        document.getElementById("carousel-title").textContent = currentSet[index].title;
-        document.getElementById("carousel-caption").textContent = currentSet[index].caption;
-      }
+function buildCarousel(set) {
+  track.innerHTML = ""; 
+  
+   set.forEach(item => {
+    const link = document.createElement("a");
+    link.href = item.link || "#";
+     
+    const img = document.createElement("img");
+    img.src = item.src;
+    img.alt = item.title;
+     
+    link.appendChild(img);
+    track.appendChild(link);
+  });
+  index = 0;
+  updateCarousel();
+  updateText();
+}
 
-      document.getElementById("prev").onclick = function () {
-        index = (index - 1 + currentSet.length) % currentSet.length;
-        updateImage();
-      };
+function updateCarousel() {
+  track.style.transform = `translateX(${-index * 960}px)`;
+}
 
-      document.getElementById("next").onclick = function () {
-        index = (index + 1) % currentSet.length;
-        updateImage();
-      };
+function updateText() {
+  const title = document.getElementById("carousel-title");
+  const caption = document.getElementById("carousel-caption");
+  if (currentSet[index]) {
+    title.textContent = currentSet[index].title;
+    caption.textContent = currentSet[index].caption;
+  }
+}
 
-      let defaultColor = "#8AC7F9";
+document.getElementById("next").onclick = () => {
+  index++;
+  if (index >= currentSet.length) index = 0;
+  updateCarousel();
+  updateText();
+};
 
-      function activateSet (set, activeBtn, inactiveBtn) {
-        currentSet = set;
-        index = 0;
-        updateImage();
+document.getElementById("prev").onclick = () => {
+  index--;
+  if (index < 0) index = currentSet.length - 1;
+  updateCarousel();
+  updateText();
+};
 
-        activeBtn.style.backgroundColor = "#1D76C0";
-        inactiveBtn.style.backgroundColor = defaultColor;
-      }
+function activateSet(set) {
+  currentSet = set;
+  buildCarousel(currentSet);
+}
 
-      projectsBtn.onclick = function () {
-        activateSet(projectImages, projectsBtn, worksBtn);
-      };
+projectsBtn.onclick = () => activateSet(projectImages);
+worksBtn.onclick = () => activateSet(workImages);
 
-      worksBtn.onclick = function () {
-        activateSet(workImages, worksBtn, projectsBtn);
-      };
-
-      updateImage();
+buildCarousel(projectImages);
     </script>
   </body>
 </html>
