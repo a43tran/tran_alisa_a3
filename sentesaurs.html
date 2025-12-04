@@ -112,12 +112,21 @@
     }
     
     .overview {
+       display: grid;
+      grid-template-columns: 60% 50%;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
       margin-top: 100px;
       margin-left: 120px;
     }
     
     .overview p {
       margin-bottom: 40px;
+    }
+    
+    .overview img {
+      width: 400px;
     }
 
     .arrow {
@@ -126,6 +135,7 @@
       margin-top: 10px;
       position: absolute;
     }
+    
   </style>
   <body>
 
@@ -146,13 +156,18 @@
           <img src="photos/sentesaurs.png" alt="Sentensaur">
         </div>
         <div class="overview">
-         <h1>Overview</h1>
+          <div class="overview-item">
+                     <h1>Overview</h1>
           <p>
             When given the words “hairy,” “cat,” and “run,” what’s the most complicated sentence you can come up with?  Hm… What about “the fluffy feline proceeds quickly”? That’s exactly how Sentesaur begins. With a handful of adjectives, nouns, and verbs, players “blow up” simple words into the most elaborate, over-the-top sentences they can imagine.
           </p>
           <p>
             At the UW/UX Flow Designathon, Cathy Yin, Lily Song, and I secured second place with Sentesaur, a physical card game designed to help elementary school students build language skills in a fun, collaborative, and entirely screen-free way.  
           </p>
+          </div>
+          <div class="overview-item">
+          <img src="sentesaurs/overview.png" alt="Sentesaur card example">
+          </div>
         </div>
       </div>
     </div>
