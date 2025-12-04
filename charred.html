@@ -182,12 +182,17 @@
     }
     
     .artwork-ingredients {
-    padding: 0 120px;
       margin-bottom: 40px;
+      padding: 0 120px;
+    }
+    
+    .ingredients {
+                  position: relative;
+  width: 450px; 
+  overflow: visible;
     }
 
     .ingredients-carousel {
-      position: relative;
       width: 450px;
       overflow: hidden;
     }
@@ -204,29 +209,39 @@
     }
 
     .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.4);
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      font-size: 24px;
-      cursor: pointer;
-      border-radius: 8px;
+ position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        /* AI-Assisted (ChatGPT) to properly center arrows.
+                                     Prompt: Why are my arrows not centered?? */
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        background-color: #CADBE9;
+        color: #003F73;
+        font-size: 36px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+        transition: transform 0.2s ease, background-color 0.2s ease;
+        /* AI-Assisted (ChatGPT) to achieve a smooth animated effect
+                                      Prompt: How do I smoothen the change in colour when I hover? */
     }
 
     .carousel-btn.prev {
-      left: 10px;
+      left: -20px;
     }
 
     .carousel-btn.next {
-      right: 10px;
+      right: -20px;
     }
 
     .carousel-btn:hover {
-      background: rgba(0, 0, 0, 0.6);
-    }
+        transform: translateY(-50%) scale(1.1);
+        /* AI-Assisted (ChatGPT) to achieve a smooth animated effect
+                                       Prompt: How do I smoothen the change in colour when I hover? */
+        background-color: #8AC7F9;
+      }
+
   </style>
 
   <body>
@@ -278,6 +293,7 @@
           
         <div class="artwork">
           <div class="artwork-item-pics">
+            <div class="ingredients">
          <div class="ingredients-carousel">
             <div class="carousel-track">
               <img src="mixed-media/lettuce.jpg" alt="">
@@ -298,6 +314,7 @@
             <button class="carousel-btn prev">‹</button>
             <button class="carousel-btn next">›</button>
           </div>
+                          </div>
           </div>
           <div class="artwork-item-pics">
             <img src="mixed-media/charred-close.jpg" alt="Hotpot sculpture">
