@@ -653,24 +653,28 @@ Date retrieved: November 21, 2025
         projectsBtn.classList.remove("active");
       });
 
-      function buildCarousel (set) {
-        track.innerHTML = "";
+function buildCarousel(set) {
+  track.innerHTML = "";
 
-        set.forEach(item => {
-          const link = document.createElement("a");
-          link.href = item.link || "#";
+  set.forEach(item => {
+    const img = document.createElement("img");
+    img.src = item.src;
+    img.alt = item.title;
 
-          const img = document.createElement("img");
-          img.src = item.src;
-          img.alt = item.title;
+    if (item.link) {
+      const link = document.createElement("a");
+      link.href = item.link;
+      link.appendChild(img);
+      track.appendChild(link);
+    } else {
+      track.appendChild(img);
+    }
+  });
 
-          link.appendChild(img);
-          track.appendChild(link);
-        });
-        index = 0;
-        updateCarousel();
-        updateText();
-      }
+  index = 0;
+  updateCarousel();
+  updateText();
+}
 
       function updateCarousel () {
         track.style.transform = `translateX(${-index * 960}px)`;
