@@ -181,19 +181,32 @@
         No prompt, referenced from past use */
     }
     
+    .pages {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      gap: 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 120px;
+    }
+    
     .page-item {
-    margin-bottom: 40px;
+     margin-bottom: 40px;
+    }
+    
+    .page-item img {
+      margin-bottom: 20px;  
     }
     
     .front-cover {
+      rotate: -3deg
       width: 600px;
       height: auto;
     }
-
+    
     .page {
-      width: 450px;
+      width: 250px;
       height: auto;
-      margin-bottom: 20px;   
     }
 
     .artwork-item img:hover {
@@ -250,7 +263,7 @@
             Magazine Pages
           </h2>
         </div>
-        <div class="artwork">
+        <div class="pages">
           <div class="page-item">
            <img src="digital-design/front-cover.png" alt="Front & back magazine cover" class="front-cover">
           </div>
