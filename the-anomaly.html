@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>The Anomaly</title>
-     <!-- Code copied from: https://www.w3schools.com/howto/howto_html_favicon.asp
+    <!-- Code copied from: https://www.w3schools.com/howto/howto_html_favicon.asp
           Author: W3Schools
           Name: How TO - Add a Favicon in HTML
           Description: A website icon (favicon)
@@ -110,6 +110,7 @@
     .content {
       width: 1200px;
       margin: 0 auto;
+      background-color: red;
     }
 
     .header {
@@ -166,7 +167,7 @@
     .artwork-item {
       margin-bottom: -50px;
     }
-    
+
     .artwork-item p {
       margin-bottom: 40px;
     }
@@ -191,37 +192,43 @@
     }
 
     .page-item p {
-      margin-top: 50px;
+      margin-top: 20px;
     }
-    
+
     .page-caption h4 {
       margin-top: 20px;
     }
-    
-    .page-part2 {
-      display: flex;
+
+    .page-grid-4x1 {
+      width: 1200px;
+      margin: 0 auto;
     }
-    
-    .page-part2 img {
-      width: 280px;
-      height: auto;
+
+    .grid-4x1-row {
       display: flex;
+      gap: 20px;
       align-items: flex;
       justify-content: center;
-      margin-left: 10px;
+      padding: 0 120px;
+      margin-bottom: 40px;
     }
-    
+
+    .grid-4x1-item img {
+      width: 220px;
+      height: auto;
+    }
+
     .front-cover {
       width: 900px;
       height: auto;
     }
-    
+
     .page {
       width: 280px;
       height: auto;
       margin-bottom: 20px;
     }
-    
+
     .artwork-item img:hover {
       transform: translateY(-10px);
       /* AI-Assisted (ChatGPT) to achieve a smooth rise animated effect 
@@ -253,19 +260,19 @@
         <div class="artwork">
           <div class="artwork-item">
             <h4>
-            The Anomaly is a magazine that reflects how my design journey and thinking has evolved since GBDA 101 in my first year of university. 
+              The Anomaly is a magazine that reflects how my design journey and thinking has evolved since GBDA 101 in my first year of university.
             </h4>
             <p>
-              Beginning GBDA-101, I initially perceived myself as an individual who merely enjoys expressing themselves through vivid strokes and colours, leaving the canvas open to interpretation. Contrary to the deeply personal, and instinctive nature of my artistic process, the term and concept of “design” felt more foreign and restrictive, and bound by a process concentrated in rationality, structure and conceptual thought to ensure a work’s functionality, affordance and accessibility. 
+              Beginning GBDA-101, I initially perceived myself as an individual who merely enjoys expressing themselves through vivid strokes and colours, leaving the canvas open to interpretation. Contrary to the deeply personal, and instinctive nature of my artistic process, the term and concept of “design” felt more foreign and restrictive, and bound by a process concentrated in rationality, structure and conceptual thought to ensure a work’s functionality, affordance and accessibility.
             </p>
             <p>
-              I also confined design exclusively to mediums existing within the digital space that offer minimal physical control, compared to the manual precision of a pencil that relies on the amount of pressure, directed angle, and path the hand dances in. However, I realize that art, intended to provoke thought, and design, aimed to serve functional purpose, inevitably intersect, coinciding as a medley of two neighbouring disciplines that require similar compositional principles, creativity and most importantly, intent, regardless of the medium to thrive. The Anomaly magazine hopes to express the same sentiment, through experimental, fun and vibrant typography, primary colours and an abstract layered page gap that deviates from standard magazine spreads. 
+              I also confined design exclusively to mediums existing within the digital space that offer minimal physical control, compared to the manual precision of a pencil that relies on the amount of pressure, directed angle, and path the hand dances in. However, I realize that art, intended to provoke thought, and design, aimed to serve functional purpose, inevitably intersect, coinciding as a medley of two neighbouring disciplines that require similar compositional principles, creativity and most importantly, intent, regardless of the medium to thrive. The Anomaly magazine hopes to express the same sentiment, through experimental, fun and vibrant typography, primary colours and an abstract layered page gap that deviates from standard magazine spreads.
             </p>
-            </div>
+          </div>
           <div class="artwork-item">
             <img src="digital-design/the-anomaly.jpg" alt="Graffiti-themed magazine about my art journey in GBDA 101">
             <h4>
-               8.5” x 11”, Adobe Indesign &amp; Photoshop, 2025
+              8.5” x 11”, Adobe Indesign &amp; Photoshop, 2025
             </h4>
           </div>
         </div>
@@ -287,35 +294,52 @@
           </div>
           <div class="page-item">
             <img src="digital-design/page1.png" alt="Preliminary sketch of Euphony & Cacophony" class="page">
-                               <div class="page-caption">      
-            <h4>
-              Page 2 &amp; 3
+            <div class="page-caption">
+              <h4>
+                Page 2 &amp; 3
               </h4>
             </div>
             <img src="digital-design/page2.png" alt="Thumbnails of Euphony & Cacophony" class="page">
             <div class="page-caption">
               <h4>
-              Page 4 &amp; 5
+                Page 4 &amp; 5
               </h4>
             </div>
           </div>
         </div>
-        
-        <div class="page-part2">
-                    <div class="page-item">
-                      <img src="digital-design/page3.png" alt="Front & back magazine cover">
+
+
+        <div class="page-grid-4x1">
+          <div class="grid-4x1-row">
+            <div class="grid-4x1-item">
+              <img src="digital-design/page3.png" alt="Front & back magazine cover">
+            </div>
+            <div class="grid-4x1-item">
+              <img src="digital-design/page3.png" alt="Front & back magazine cover">
+            </div>
+            <div class="grid-4x1-item">
+              <img src="digital-design/page3.png" alt="Front & back magazine cover">
+            </div>
+            <div class="grid-4x1-item">
+              <img src="digital-design/page4.png" alt="Front & back magazine cover">
+            </div>
           </div>
-            <div class="page-item">
-                      <img src="digital-design/page3.png" alt="Front & back magazine cover">
+                  <div class="grid-4x1-row">
+            <div class="grid-4x1-item">
+              <img src="digital-design/page5.png" alt="Front & back magazine cover">
+            </div>
+            <div class="grid-4x1-item">
+              <img src="digital-design/page6.png" alt="Front & back magazine cover">
+            </div>
+            <div class="grid-4x1-item">
+              <img src="digital-design/page7.png" alt="Front & back magazine cover">
+            </div>
+            <div class="grid-4x1-item">
+              <img src="digital-design/page8.png" alt="Front & back magazine cover">
+            </div>
           </div>
-            <div class="page-item">
-                      <img src="digital-design/page3.png" alt="Front & back magazine cover">
-          </div>
-            <div class="page-item">
-                      <img src="digital-design/page3.png" alt="Front & back magazine cover">
-          </div>
-          </div>
-        
+        </div>
+
         <div class="header">
           <h2>
             Sections
