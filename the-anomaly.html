@@ -181,7 +181,7 @@
         No prompt, referenced from past use */
     }
 
-    .pages {
+    .page-part1 {
       display: grid;
       grid-template-columns: 60% 40%;
       gap: 50px;
@@ -193,19 +193,42 @@
     .page-item p {
       margin-top: 50px;
     }
-
+    
     .page-caption h4 {
       margin-top: 20px;
+    }
+    
+    .page-part2 {
+      display: flex;
+    }
+    
+    .page-part2 img {
+      width: 280px;
+      height: auto;
+      display: flex;
+      align-items: flex;
+      justify-content: center;
+      margin-left: 10px;
+    }
+    
+    .front-cover {
+      position: relative;
+      right: 200px;
+      bottom: 20px;
+      width: 900px;
+      height: auto;
+    }
+    
+    .page {
+      width: 280px;
+      height: auto;
+      margin-bottom: 20px;
     }
     
     .artwork-item img:hover {
       transform: translateY(-10px);
       /* AI-Assisted (ChatGPT) to achieve a smooth rise animated effect 
         No prompt, referenced from past use */
-    }
-    
-    .front-cover {
-      width: 1000px;
     }
   </style>
 
@@ -256,24 +279,50 @@
             Magazine Pages
           </h2>
         </div>
-        <div class="pages">
+        <div class="page-part1">
           <div class="page-item">
-            <img src="digital-design/front-cover.png" alt="Mindmap of Euphony & Cacophony" class="front-cover">
+            <img src="digital-design/front-cover.png" alt="Front & back magazine cover" class="front-cover">
             <div class="page-caption">
               <h4>
-                Mind Map
+                Front &amp; Back Cover
               </h4>
             </div>
           </div>
           <div class="page-item">
-            <img class="sketch1" src="" alt="Preliminary sketch of Euphony & Cacophony">
-            <img class="sketch2" src="" alt="Thumbnails of Euphony & Cacophony">
+            <img src="digital-design/page1.png" alt="Preliminary sketch of Euphony & Cacophony" class="page">
+                               <div class="page-caption">      
+            <h4>
+              Page 2 &amp; 3
+              </h4>
+            </div>
+            <img src="digital-design/page2.png" alt="Thumbnails of Euphony & Cacophony" class="page">
             <div class="page-caption">
               <h4>
-                Preliminary Sketches &amp; Thumbnails
+              Page 4 &amp; 5
               </h4>
             </div>
           </div>
+        </div>
+        
+        <div class="page-part2">
+                    <div class="page-item">
+                      <img src="digital-design/page3.png" alt="Front & back magazine cover">
+          </div>
+            <div class="page-item">
+                      <img src="digital-design/page3.png" alt="Front & back magazine cover">
+          </div>
+            <div class="page-item">
+                      <img src="digital-design/page3.png" alt="Front & back magazine cover">
+          </div>
+            <div class="page-item">
+                      <img src="digital-design/page3.png" alt="Front & back magazine cover">
+          </div>
+          </div>
+        
+        <div class="header">
+          <h2>
+            Sections
+          </h2>
         </div>
 
         <!-- Footer -->
