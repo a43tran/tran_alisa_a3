@@ -158,7 +158,6 @@
       display: grid;
       grid-template-columns: 50% 50%;
       gap: 50px;
-      max-width: 1200px;
       margin: 0 auto;
       padding: 0 120px;
     }
@@ -180,20 +179,16 @@
       /* AI-Assisted (ChatGPT) to achieve a smooth rise animated effect 
         No prompt, referenced from past use */
     }
-
-    .pages-part1 {
-      display: grid;
-      grid-template-columns: 60% 40%;
-      gap: 170px;
-      max-width: 960px;
-      margin: 0 auto;
+    
+    .magazine-pages {
+      max-width: 1200px;
+      padding: 0 120px;
     }
 
-    .pages-part2 {
+    .pages {
       display: grid;
       grid-template-columns: 25% 25% 25% 25%;
       gap: 10px;
-      max-width: 960px;
       margin: 0 auto;
     }
 
@@ -213,7 +208,13 @@
       margin-top: 20px;
     }
 
+    .cover-caption h4 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
     .front-cover {
+      margin: 0 auto;
       rotate: -3deg;
       width: 600px;
       height: auto;
@@ -225,6 +226,10 @@
       width: 230px;
       height: auto;
       border-radius: 10px;
+    }
+    
+    .magazine-sections {
+      margin-bottom: 100px;
     }
 
     .artwork-item img:hover {
@@ -276,21 +281,20 @@
         </div>
 
         <!-- Magazine Pages -->
-        <div class="header">
+                <div class="header">
           <h2>
             Magazine Pages
           </h2>
         </div>
-        <div class="pages-part1">
-          <div class="page-item">
-            <img src="digital-design/front-cover.png" alt="Front & back magazine cover" class="front-cover">
-            <h4>
-              Front &amp; Back Cover
-            </h4>
-          </div>
+        <div class="magazine-pages">
+        <img src="digital-design/front-cover.png" alt="Front & back magazine cover" class="front-cover">
+        <div class="cover-caption">
+          <h4>
+            Front &amp; Back Cover
+          </h4>
         </div>
 
-        <div class="pages-part2">
+        <div class="pages">
           <div class="page-item">
             <img src="digital-design/page1.png" alt="Page 1 & 2 of magazine" class="page">
             <div class="page-caption">
@@ -356,7 +360,15 @@
             </div>
           </div>
         </div>
-
+                </div>
+        
+        <div class="magazine-sections">
+        <div class="header">
+          <h2>
+            Sections
+          </h2>
+        </div>
+                  </div>
 
         <!-- Footer -->
         <div class="footer">
